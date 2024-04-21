@@ -12,10 +12,10 @@ aws configure
 aws eks list-clusters --region eu-central-1 --output table --query 'clusters'
 
 # check config of specific cluster - VPC config shows whether public access enabled on cluster API endpoint
-aws eks describe-cluster --region eu-central-1 --name myapp-eks-cluster --query 'cluster.resourcesVpcConfig'
+aws eks describe-cluster --region eu-central-1 --name verse-eks-cluster --query 'cluster.resourcesVpcConfig'
 
 # create kubeconfig file for cluster in ~/.kube
-aws eks update-kubeconfig --region eu-central-1 --name myapp-eks-cluster
+aws eks update-kubeconfig --region eu-central-1 --name verse-eks-cluster
 
 # test configuration
 kubectl get svc
